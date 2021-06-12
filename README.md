@@ -19,7 +19,7 @@ $ npm install -g uni-query
 $ uni-query COMMAND
 running command...
 $ uni-query (-v|--version|version)
-uni-query/0.0.1 linux-x64 node-v14.17.0
+uni-query/0.1.0 linux-x64 node-v14.17.0
 $ uni-query --help [COMMAND]
 USAGE
   $ uni-query COMMAND
@@ -28,28 +28,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`uni-query hello [FILE]`](#uni-query-hello-file)
+* [`uni-query describe-tx TX`](#uni-query-describe-tx-tx)
 * [`uni-query help [COMMAND]`](#uni-query-help-command)
 
-## `uni-query hello [FILE]`
+## `uni-query describe-tx TX`
 
-describe the command here
+Displays raw information about a transaction given its hash
 
 ```
 USAGE
-  $ uni-query hello [FILE]
+  $ uni-query describe-tx TX
+
+ARGUMENTS
+  TX  The hash of the transaction to describe
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ uni-query hello
-  hello world from ./src/hello.ts!
+  -h, --help             show CLI help
+  --network=(homestead)  [default: homestead]
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/th0masb/uni-query/blob/v0.0.1/src/commands/hello.ts)_
+_See code: [src/commands/describe-tx.ts](https://github.com/th0masb/uni-query/blob/v0.1.0/src/commands/describe-tx.ts)_
 
 ## `uni-query help [COMMAND]`
 
