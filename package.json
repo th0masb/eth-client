@@ -1,6 +1,6 @@
 {
   "name": "uni-query",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Thomas Ball",
   "bin": {
     "uni-query": "./bin/run"
