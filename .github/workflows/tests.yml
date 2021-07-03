@@ -14,6 +14,8 @@ jobs:
         run: npm run get-version
       - name: Echo version
         run: echo "APP_VERSION=$(npm run get-version)"
+      - name: Echo version
+        run: echo "APP_VERSION=0.2.3"
       - name: Store version
         run: echo "APP_VERSION=$(npm run get-version)" >> $GITHUB_ENV
       - name: Display version
