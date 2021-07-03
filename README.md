@@ -6,24 +6,21 @@ uni-query
 [![Downloads/week](https://img.shields.io/npm/dw/uni-query.svg)](https://npmjs.org/package/uni-query)
 [![License](https://img.shields.io/npm/l/uni-query.svg)](https://github.com/th0masb/uni-query/blob/master/package.json)
 
-<!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
-<!-- tocstop -->
+
 # Usage
-<!-- usage -->
 ```sh-session
 $ npm install -g uni-query
 $ uni-query COMMAND
 running command...
 $ uni-query (-v|--version|version)
-uni-query/0.2.0 linux-x64 node-v14.17.0
+uni-query/0.2.0 linux-x64 node-v14.17.2
 $ uni-query --help [COMMAND]
 USAGE
   $ uni-query COMMAND
 ...
 ```
-<!-- usagestop -->
 # Commands
 <!-- commands -->
 * [`uni-query describe-tx TX`](#uni-query-describe-tx-tx)
