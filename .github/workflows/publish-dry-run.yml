@@ -1,11 +1,8 @@
-name: NPM upload dry run
+name: Publication dry-run
 on:
   pull_request:
-    paths:
-      - src/**
-      - package.json
     branches:
-      - main-test
+      - main
 jobs:
   check-upload:
     runs-on: ubuntu-20.04
