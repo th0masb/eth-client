@@ -11,8 +11,8 @@ export default class TrackTransactions extends Command {
     "Find transactions involving an address in a slice of blocks";
 
   static examples = [
-    "$ uni-query track-tx --start -5 --concurrency 5",
-    "$ uni-query track-tx 0xdAC17F958D2ee523a2206206994597C13D831ec7 --start 5 --end 10",
+    "$ eth-client track-tx --start -5 --concurrency 5",
+    "$ eth-client track-tx 0xdAC17F958D2ee523a2206206994597C13D831ec7 --start 5 --end 10",
   ];
 
   static flags = {
