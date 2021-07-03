@@ -1,6 +1,6 @@
 {
   "name": "@th0masb/eth-client",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "author": "Thomas Ball",
   "bin": {
     "eth-client": "./bin/run"
@@ -26,6 +26,7 @@
     "eslint-config-prettier": "^8.3.0",
     "globby": "^10.0.2",
     "prettier": "2.3.1",
+    "semver": "^7.3.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.9"
   },
@@ -53,6 +54,7 @@
   },
   "repository": "th0masb/eth-client",
   "scripts": {
+    "check-version": "semver --range \">$(npm view $npm_package_name version)\" $npm_package_version",
     "postpack": "rm -f oclif.manifest.json",
     "format": "prettier --write .",
     "build": "tsc -b",
@@ -60,7 +62,8 @@
     "lintfix": "eslint . --ext .ts --config .eslintrc --fix",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
-    "readme": "oclif-dev readme"
+    "readme": "oclif-dev readme",
+    "standardise": "oclif-dev readme && prettier --write . && npm i"
   },
   "types": "lib/index.d.ts"
 }
