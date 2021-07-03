@@ -1,11 +1,11 @@
 {
-  "name": "uni-query",
+  "name": "@th0masb/eth-client",
   "version": "0.2.0",
   "author": "Thomas Ball",
   "bin": {
-    "uni-query": "./bin/run"
+    "eth-client": "./bin/run"
   },
-  "bugs": "https://github.com/th0masb/uni-query/issues",
+  "bugs": "https://github.com/th0masb/eth-client/issues",
   "dependencies": {
     "@ethersproject/abstract-provider": "^5.3.0",
     "@oclif/command": "^1.8.0",
@@ -38,7 +38,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/th0masb/uni-query",
+  "homepage": "https://github.com/th0masb/eth-client",
   "keywords": [
     "oclif"
   ],
@@ -46,12 +46,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "uni-query",
+    "bin": "eth-client",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "th0masb/uni-query",
+  "repository": "th0masb/eth-client",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "format": "prettier --write .",

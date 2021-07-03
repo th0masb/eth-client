@@ -1,0 +1,21 @@
+name: NPM upload dry run
+on:
+  pull_request:
+    paths:
+      - src/**
+      - package.json
+    branches:
+      - main
+jobs:
+  check-upload:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Set access token
+        env:
+          TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
+        run: npm set //registry.npmjs.org/:_authToken $TOKEN
+      - name: Publish
+        run: npm publish --access public --dry-run
