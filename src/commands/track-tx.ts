@@ -11,9 +11,9 @@ export default class TrackTransactions extends Command {
     "Find transactions involving an address in a slice of blocks";
 
   static examples = [
-    '$ uni-query track-tx --start -5 --concurrency 5',
-    '$ uni-query track-tx 0xdAC17F958D2ee523a2206206994597C13D831ec7 --start 5 --end 10'
-  ]
+    "$ uni-query track-tx --start -5 --concurrency 5",
+    "$ uni-query track-tx 0xdAC17F958D2ee523a2206206994597C13D831ec7 --start 5 --end 10",
+  ];
 
   static flags = {
     help: flags.help({
@@ -22,7 +22,7 @@ export default class TrackTransactions extends Command {
     network: flags.enum({
       options: ["homestead"],
       default: "homestead",
-      description: "The network to search on"
+      description: "The network to search on",
     }),
     start: flags.integer({
       required: true,
@@ -35,7 +35,7 @@ export default class TrackTransactions extends Command {
     }),
     concurrency: flags.integer({
       default: 10,
-      description: "Maximum number of concurrent requests for data fetching"
+      description: "Maximum number of concurrent requests for data fetching",
     }),
     pretty: flags.boolean({
       description: "Pretty print the json output instead of using ndjson",
