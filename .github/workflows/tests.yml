@@ -1,4 +1,4 @@
-name: Publish application
+name: Tests
 on:
   push:
     branches:
@@ -8,8 +8,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+      - name: Install
+        run: npm install
+      - name: Echo version
+        run: echo "APP_VERSION=$(npm run get-version)"
       - name: Store version
-        run: npm install && echo "APP_VERSION=$(npm run get-version)" >> $GITHUB_ENV
+        run: echo "APP_VERSION=$(npm run get-version)" >> $GITHUB_ENV
       - name: Display version
         run: echo ${{ env.APP_VERSION }}
 #      - name: Create tag
