@@ -1,6 +1,6 @@
 {
   "name": "@th0masb/eth-client",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Thomas Ball",
   "bin": {
     "eth-client": "./bin/run"
@@ -55,6 +55,7 @@
   "repository": "th0masb/eth-client",
   "scripts": {
     "check-version": "semver --range \">$(npm view $npm_package_name version)\" $npm_package_version",
+    "get-version": "echo $npm_package_version",
     "postpack": "rm -f oclif.manifest.json",
     "format": "prettier --write .",
     "build": "tsc -b",

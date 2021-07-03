@@ -16,3 +16,20 @@ jobs:
         run: npm set //registry.npmjs.org/:_authToken $TOKEN
       - name: Publish
         run: npm publish --access public
+  tag-repo:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Store version
+        run: npm install && echo "APP_VERSION=$(npm run get-version)" >> $GITHUB_ENV
+      - name: Create tag
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            github.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/tags/v${{ env.APP_VERSION }}",
+              sha: context.sha
+            })

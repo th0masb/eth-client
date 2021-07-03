@@ -41,7 +41,7 @@ OPTIONS
   --network=(homestead)  [default: homestead]
 ```
 
-_See code: [src/commands/describe-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.2/src/commands/describe-tx.ts)_
+_See code: [src/commands/describe-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.3/src/commands/describe-tx.ts)_
 
 ## `eth-client help [COMMAND]`
 
@@ -84,5 +84,5 @@ EXAMPLES
   $ eth-client track-tx 0xdAC17F958D2ee523a2206206994597C13D831ec7 --start 5 --end 10
 ```
 
-_See code: [src/commands/track-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.2/src/commands/track-tx.ts)_
+_See code: [src/commands/track-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.3/src/commands/track-tx.ts)_
 <!-- commandsstop -->
