@@ -10,16 +10,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install
         run: npm install
-      - name: Echo version
-        run: npm run get-version
-      - name: Echo version
-        run: echo "APP_VERSION=$(npm run get-version)"
-      - name: Echo version
-        run: echo "APP_VERSION=0.2.3"
       - name: Store version
-        run: echo "APP_VERSION=$(npm run get-version)" >> $GITHUB_ENV
+        run: echo "APP_VERSION=$(npm run --silent get-version)" >> $GITHUB_ENV
       - name: Display version
-        run: echo ${{ env.APP_VERSION }}
+        run: echo "Detected application version ${{ env.APP_VERSION }}"
 #      - name: Create tag
 #        uses: actions/github-script@v3
 #        with:
