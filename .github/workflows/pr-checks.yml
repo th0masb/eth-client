@@ -1,0 +1,29 @@
+name: PR automated checks
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  check-build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Check build
+        run: npm run build
+      - name: Check test
+        run: npm run test
+      - name: Check lint
+        run: npm run lint
+      - name: Apply formatting
+        run: npm run format
+      - name: Sync readme
+        run: npm run readme
+      - name: Check working tree clean
+        run: |
+          if [ $(git status --porcelain=v1 | wc -l) -ne 0 ]; then
+              git status --porcelain
+              git diff
+              exit 1
+          fi

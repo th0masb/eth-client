@@ -54,12 +54,13 @@
   "repository": "th0masb/uni-query",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
-    "posttest": "npx eslint . --ext .ts --config .eslintrc",
-    "lintfix": "npx eslint . --ext .ts --config .eslintrc --fix",
-    "build": "tsc -b && npx prettier --write . && npx eslint . --ext .ts --config .eslintrc",
+    "format": "prettier --write .",
+    "build": "tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "lintfix": "eslint . --ext .ts --config .eslintrc --fix",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
-    "readme": "oclif-dev readme && git add README.md"
+    "readme": "oclif-dev readme"
   },
   "types": "lib/index.d.ts"
 }
