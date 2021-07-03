@@ -14,14 +14,14 @@ jobs:
         run: echo "APP_VERSION=$(npm run --silent get-version)" >> $GITHUB_ENV
       - name: Display version
         run: echo "Detected application version ${{ env.APP_VERSION }}"
-#      - name: Create tag
-#        uses: actions/github-script@v3
-#        with:
-#          github-token: ${{ github.token }}
-#          script: |
-#            github.git.createRef({
-#              owner: context.repo.owner,
-#              repo: context.repo.repo,
-#              ref: "refs/tags/v${{ env.APP_VERSION }}",
-#              sha: context.sha
-#            })
+      - name: Create tag
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ github.token }}
+          script: |
+            github.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/tags/test-v${{ env.APP_VERSION }}",
+              sha: context.sha
+            })
