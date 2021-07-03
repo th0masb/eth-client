@@ -5,7 +5,7 @@ on:
       - src/**
       - package.json
     branches:
-      - main
+      - main-test
 jobs:
   check-upload:
     runs-on: ubuntu-20.04
@@ -15,9 +15,5 @@ jobs:
         run: npm install
       - name: Check version increment
         run: npm run check-version
-      - name: Set access token
-        env:
-          TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
-        run: npm set //registry.npmjs.org/:_authToken $TOKEN
-      - name: Publish
+      - name: Simulate publish
         run: npm publish --access public --dry-run

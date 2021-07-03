@@ -2,7 +2,7 @@ name: PR automated checks
 on:
   pull_request:
     branches:
-      - main
+      - main-test
 jobs:
   check-build:
     runs-on: ubuntu-20.04
