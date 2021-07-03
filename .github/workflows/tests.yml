@@ -11,7 +11,7 @@ jobs:
       - name: Install
         run: npm install
       - name: Echo version
-        run: npm run get-version
+        run: echo "$(npm run get-version)"
       - name: Store version
         run: echo "APP_VERSION=$(npm run get-version)" >> $GITHUB_ENV
       - name: Display version
