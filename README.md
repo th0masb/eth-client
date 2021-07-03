@@ -2,8 +2,8 @@ eth-client
 =========
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/eth-client.svg)](https://npmjs.org/package/eth-client)
-[![Downloads/week](https://img.shields.io/npm/dw/eth-client.svg)](https://npmjs.org/package/eth-client)
+[![Version](https://img.shields.io/npm/v/eth-client.svg)](https://npmjs.org/package/@th0masb/eth-client)
+[![Downloads/week](https://img.shields.io/npm/dw/eth-client.svg)](https://npmjs.org/package/@th0masb/eth-client)
 [![License](https://img.shields.io/npm/l/eth-client.svg)](https://github.com/th0masb/eth-client/blob/master/package.json)
 
 * [Usage](#usage)
@@ -11,14 +11,12 @@ eth-client
 
 # Usage
 ```sh-session
-$ npm install -g eth-client
+$ npm install -g @th0masb/eth-client
 $ eth-client COMMAND
-running command...
+e.g
 $ eth-client (-v|--version|version)
-eth-client/0.2.0 linux-x64 node-v14.17.2
+$ eth-client --help
 $ eth-client --help [COMMAND]
-USAGE
-  $ eth-client COMMAND
 ...
 ```
 # Commands
@@ -43,7 +41,7 @@ OPTIONS
   --network=(homestead)  [default: homestead]
 ```
 
-_See code: [src/commands/describe-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.0/src/commands/describe-tx.ts)_
+_See code: [src/commands/describe-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.2/src/commands/describe-tx.ts)_
 
 ## `eth-client help [COMMAND]`
 
@@ -86,5 +84,5 @@ EXAMPLES
   $ eth-client track-tx 0xdAC17F958D2ee523a2206206994597C13D831ec7 --start 5 --end 10
 ```
 
-_See code: [src/commands/track-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.0/src/commands/track-tx.ts)_
+_See code: [src/commands/track-tx.ts](https://github.com/th0masb/eth-client/blob/v0.2.2/src/commands/track-tx.ts)_
 <!-- commandsstop -->
